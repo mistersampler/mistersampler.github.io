@@ -1,0 +1,284 @@
+:root {
+	--viewport-height: 100vh;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+::selection {
+	color: #181818;
+	background-color: rgba(255, 195, 0, 0.3);
+}
+
+.ns {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+	min-height: 100vh;
+}
+
+.header {
+	/* box-shadow: 5px 0px 10px rgb(0, 0, 0); */
+	height: 75px;
+}
+
+.header > .container {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: space-between;
+}
+
+.full-w {
+	min-width: 100vw !important;
+}
+.full-h {
+	min-height: 100vh !important;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	display: block;
+	position: relative;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.np {
+	padding: 0 !important;
+}
+.nma {
+	margin: 0 !important;
+}
+
+.navigation .navigation__list {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin-bottom: 0px;
+	position: relative;
+}
+
+.navigation .navigation__list .navigation__item .navigation__link {
+	padding: 4px 7px;
+	transition: all 150ms ease-out;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.hero {
+	height: 55vh;
+	width: 100%;
+	display: flex;
+	background: url('../../content/images/hero/barbecue-bbq-beef-burger-charcoal-cooking-1556491-pxhere.com.jpg') center
+		center no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-bottom: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero__textwrapper {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.vhc {
+	position: absolute;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+}
+
+.hero__headline {
+	font-family: 'Lobster', sans-serif;
+	color: #fff;
+	font-size: 6rem;
+	text-shadow: 5px 5px 0px #000;
+}
+
+.hero__subline {
+	font-family: 'Indie Flower', sans-serif;
+	color: #fff;
+	text-shadow: 3px 3px 0px #000;
+}
+
+.content {
+	padding-top: 5em;
+	min-height: 100vh;
+}
+
+.sector__headline {
+	font-family: 'Lobster', sans-serif;
+	font-size: 6.2rem;
+	text-align: center;
+	position: relative;
+	margin-bottom: 4rem;
+}
+
+.sector__headline small {
+	font-size: 20%;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	display: block;
+}
+
+.nm,
+.nm:hover {
+	color: currentColor;
+	text-decoration: none;
+}
+
+.burger {
+	cursor: pointer;
+	position: relative;
+	padding: 10px;
+	background: hsl(0, 0%, 9%);
+	transition: all 150ms ease-out;
+	border: 2px dotted transparent;
+}
+
+.burger:hover {
+	background: rgb(255, 255, 255);
+	transition: all 150ms ease-out;
+	border: 2px dashed hsl(0, 0%, 9%);
+}
+
+.burger::before {
+	content: attr(data-atsu-tooltip);
+	display: inline-block;
+	position: absolute;
+	width: auto;
+	left: -100px;
+	color: transparent;
+	transition: all 150ms ease-out;
+}
+
+.burger:hover::before {
+	color: hsl(0, 0%, 9%);
+	transition: all 150ms ease-out;
+}
+
+.burger:hover .burger__layer {
+	background: hsl(0, 0%, 9%);
+	transition: all 150ms ease-out;
+	cursor: pointer;
+}
+
+.burger__layer {
+	width: 20px;
+	height: 3px;
+	display: block;
+	margin: 3px 0px;
+	background: rgb(255, 255, 255);
+	transition: all 150ms ease-out;
+}
+
+.crumbmargin {
+	margin: 35px 0 !important;
+}
+
+.button-apply {
+	width: 50%;
+	display: block;
+	padding: .65em;
+	border: 2.5px solid white;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 700;
+	margin: 0 auto;
+}
+
+.button-apply:hover {
+	width: 100%;
+}
+
+.button-status-hover {
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.button-status-hover:hover::before,
+.button-status-hover:hover::after {
+	width: 120%;
+}
+
+.button-status-hover::before {
+	left: -20px;
+}
+
+.button-status-hover::before,
+.button-status-hover::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: #ffffff;
+	opacity: .7;
+	width: 0;
+	transition: all .4s ease;
+	transform: skewX(-15deg);
+	transition-delay: 175ms;
+}
+
+.button-status-hover::after {
+	right: -20px;
+}
+
+.button-status-hover::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: #ffffff;
+	opacity: .7;
+	width: 0;
+	transition: all .4s ease;
+	transform: skewX(-15deg);
+	transition-delay: 175ms;
+}
+
+.z-index-10l {
+	position: relative;
+	box-sizing: border-box;
+	z-index: 10;
+	transition: color .4s ease;
+}
+
+.z-index-11l {
+	position: relative;
+	box-sizing: border-box;
+	z-index: 10;
+	transition: color .4s ease;
+}
+
+.button-status-hover:hover .z-index-11l {
+	transition: color .4s ease;
+	transition-delay: 175ms;
+}
+
+.alert-development {
+	border-color: #fb93ff !important;
+	background: rgba(251, 147, 255, 0.25);
+	color: #8d5e8f;
+}

@@ -1,0 +1,18 @@
+.keywords {
+    text-align: center;
+}
+
+.keyword {
+    text-transform: uppercase;
+}
+
+blockquote {
+    width: 90%;
+    display: block;
+    margin: 0 auto !important;
+    border-left: 3px solid goldenrod;
+    border-right: 3px solid goldenrod;
+    padding: 15px 30px;
+    background: rgba(218, 165, 32, 0.3);
+    border-radius: 6px;
+}
