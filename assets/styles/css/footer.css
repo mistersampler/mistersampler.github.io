@@ -90,6 +90,16 @@
 	transition: all 150ms ease-out;
 }
 
+.footer_link_denied:hover {
+	color: #da4646 !important;
+	cursor: not-allowed;
+}
+
+.footer__link_approved:hover {
+	color: #6ddd51 !important;
+	cursor: pointer;
+}
+
 /* === Sub footer === */
 
 .sb {
