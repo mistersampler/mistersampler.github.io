@@ -52,6 +52,28 @@
         });
     </script>
 
+    <script>
+        /* function hideNotice() {
+            let banner = document.getElementById("banner_alert_oldpage");
+            banner.style.display = "none";
+        } */
+
+        $(document).ready(function(){ 
+            $(".banner__close").click(function() { 
+                $("#banner_alert_oldpage").fadeOut("fast"); 
+            });
+        });
+    </script>
+
+    <script>
+        function showSource() {
+            var sauce = window.location.href;
+            var opensauce = "view-source:" + sauce;
+            
+            window.open(opensauce);
+        }
+    </script>
+
     <style>
         .user-is-admin {color: rgb(228, 187, 8); text-shadow: 0px 0px 30px currentColor, .5px .5px .5px #000;}
         .delay-05s {-webkit-animation-delay: .5s; animation-delay: .5s;}
@@ -73,6 +95,10 @@
             <a href="legal/privacy.html">Privacy Policy</a>
         </div>
     </div>
+    <header class="banner" id="banner_alert_oldpage">
+        <h1 class="banner__body">This website is based on the original concept for Mr Sampler. It was re-designed for a school project. The original can be viewed <a href="https://mrsampler.wordpress.com/" target="_blank">here</a>.</h1>
+        <span class="banner__close">&times;</span>
+    </header>
     <header class="header">
         <div class="container">
             <a href="index.html" class="nm">
@@ -118,7 +144,7 @@
             <div class="alert alert-development news__item animated fadeInUp delay-105s" style="" role="alert">
                 <h1 class="content__headline" data-announcement-date="Friday, April 3, 2020">Service Announcement</h1>
                 <article class="content__text">
-                    <p class="content__paragraph">Mr Sampler is getting a re-work as part of a school project for the time of the <a data-toggle="tooltip" title="Visit bundesgesundheitsministerium.de (external site)" href="https://www.bundesgesundheitsministerium.de/en/press/2020/coronavirus.html" target="_blank" class="external__link">COVID-19 crisis <i class="fas fa-external-link-alt" style="font-size: 73%;"></i></a>.</p>
+                    <p class="content__paragraph">Mr Sampler is getting a re-work as part of a school project for the time of the <a data-toggle="tooltip" title="Visit bundesgesundheitsministerium.de (external site)" href="https://www.https://www.bundesgesundheitsministerium.de/coronavirus.html" target="_blank" class="external__link">COVID-19 crisis <i class="fas fa-external-link-alt" style="font-size: 73%;"></i></a>.</p>
                 </article>
             </div>
 
@@ -162,7 +188,8 @@
         </div>
     </main>
     <section id="ee">
-		<span class="ee-text">Made with <span class="heart">&#10084;</span> for <a href="http://www.sekundarschule-kreuzau-nideggen.de" class="footer__link np" target="_blank">Sekundarschule Kreuzau</a></span>
+        <!-- &#128966; -- &#10084; -->
+		<span class="ee-text">Crafted with <span class="heart" style="color:rgb(228, 187, 8)">&#10084;</span> for <a href="http://www.sekundarschule-kreuzau-nideggen.de" class="footer__link np" target="_blank">Sekundarschule Kreuzau</a> with special thanks to Ann-Marie Müller</span>
 	</section>
 	<footer class="footer">
 		<div class="container">
@@ -180,18 +207,17 @@
                     <h3 class="footer__headline">Resources</h3>
                     <ul class="footer__menu">
                         <li class="footer__item"><a href="" class="footer__link">Documentation</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Lorem, ipsum.</a></li>
-                        <li class="footer__item"><a href="" class="footer__link"> Lorem, ipsum.</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Lorem, ipsum.</a></li>
+                        <li class="footer__item"><a href="https://mrsampler.wordpress.com/" target="framename" class="footer__link">Mr Sampler's Wordpress Blog</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Sekundarschule Kreuzau/Nideggen</a></li>
                     </ul>
                 </section>
                 <section class="footer__content">
                     <h3 class="footer__headline">Misc.</h3>
                     <ul class="footer__menu">
-                        <li class="footer__item"><a href="" class="footer__link">Lorem, ipsum.</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Lorem, ipsum.</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Lorem, ipsum.</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Lorem, ipsum.</a></li>
+                        <li class="footer__item"><a rel="noopener noreferrer" class="footer__link footer_link_denied">KURS Köln</a></li>
+                        <li class="footer__item"><a rel="noopener noreferrer" class="footer__link footer_link_denied">Stadt Nideggen</a></li>
+                        <li class="footer__item"><a rel="noopener noreferrer" class="footer__link footer_link_denied">Gemeinde Kreuzau</a></li>
+                        <li class="footer__item"><a onclick="showSource()" target="_blank" class="footer__link">View page source code</a></li>
                     </ul>
                 </section>
             </div>
